@@ -1,8 +1,8 @@
 Simple Course Creator Post Meta
 =====================
----
 
 !!!!! WARNING !!!!!
+---
 
 This plugin is 95% finished but the incomplete part is, unfortunately, the most important part. Interested in helping?
 
