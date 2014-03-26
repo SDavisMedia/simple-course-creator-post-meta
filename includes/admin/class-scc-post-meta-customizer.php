@@ -107,18 +107,20 @@ class SCC_Post_Meta_Customizer {
 	 * @since 1.0.0
 	 */
 	public function head_styles() {
-		$scc_pm_text_color = get_option( 'scc_pm_text_color' );
-
-		echo ! $this->sccc_active ? '<style type="text/css">' : ''; // do we need a new <style> tag?
-			echo '#scc-wrap .scc-post-meta{';
-				
-				// post meta text color
-				if ( $scc_pm_text_color ) :
-					echo "color:{$scc_pm_text_color};";		
-				endif;
-		
-			echo '}';			
-		echo ! $this->sccc_active ? '</style>' : '';
+		if ( class_exists( 'Simple_Course_Creator' ) ) {
+			$scc_pm_text_color = get_option( 'scc_pm_text_color' );
+	
+			echo ! $this->sccc_active ? '<style type="text/css">' : ''; // do we need a new <style> tag?
+				echo '#scc-wrap .scc-post-meta{';
+					
+					// post meta text color
+					if ( $scc_pm_text_color ) :
+						echo "color:{$scc_pm_text_color};";		
+					endif;
+			
+				echo '}';			
+			echo ! $this->sccc_active ? '</style>' : '';
+		}
 	}
 }
 new SCC_Post_Meta_Customizer();
