@@ -4,7 +4,7 @@ Simple Course Creator Post Meta
 !!!!! WARNING !!!!! - start
 ---
 
-This plugin is 95% finished but the incomplete part is, unfortunately, the most important part. Interested in helping?
+This plugin is 95% finished but the incomplete part, unfortunately, is the most important part. Interested in helping?
 
 Make sure you have Simple Course Creator activated. Download, install, and activate this plugin. Create a new course and add two or more posts to it. 
 
