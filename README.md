@@ -1,7 +1,5 @@
 Simple Course Creator Post Meta
 =====================
----
----
 
 !!!!! WARNING !!!!!
 
@@ -20,8 +18,6 @@ If you know what simple adjustments are needed, please fork the repo and submit 
 Thanks a ton.
 
 !!!!! WARNING !!!!!
----
----
 
 This is an add-on plugin for use with the [Simple Course Creator](https://github.com/sdavis2702/simple-course-creator) plugin.
 
