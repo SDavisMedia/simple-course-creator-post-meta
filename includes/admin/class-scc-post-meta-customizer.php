@@ -114,9 +114,9 @@ class SCC_Post_Meta_Customizer {
 				echo '#scc-wrap .scc-post-meta{';
 					
 					// post meta text color
-					if ( $scc_pm_text_color ) :
+					if ( $scc_pm_text_color ) {
 						echo "color:{$scc_pm_text_color};";		
-					endif;
+					}
 			
 				echo '}';			
 			echo ! $this->sccc_active ? '</style>' : '';
