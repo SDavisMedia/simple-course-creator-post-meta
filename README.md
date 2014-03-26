@@ -6,7 +6,7 @@ Simple Course Creator Post Meta
 
 This plugin is 95% finished but the incomplete part, unfortunately, is the most important part. Interested in helping?
 
-Make sure you have Simple Course Creator activated. Download, install, and activate this plugin. Create a new course and add two or more posts to it. 
+Make sure you have [Simple Course Creator](https://github.com/sdavis2702/simple-course-creator) activated. Download, install, and activate this plugin. Create a new course and add two or more posts to it. 
 
 In one of the posts, view the post list. You will notice that the post meta author and date show the information for the current post... not the posts being retrieved.
 
