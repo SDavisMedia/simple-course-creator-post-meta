@@ -32,8 +32,6 @@ This post meta add-on outputs additional information about each post in the post
 
 Once activated, the post authors and dates published will appear beneath the post titles.
 
-![Simple Course Creator Post Meta]( ... )
-
 ### Settings and Customizer
 ---
 
