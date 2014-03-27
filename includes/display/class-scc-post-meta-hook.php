@@ -30,7 +30,7 @@ class SCC_Post_Meta_Hook {
 	 *
 	 * @since 1.0.0
 	 */
-	public function after_item_post_meta() {
+	public function after_item_post_meta( $post_id ) {
 		$show_author = get_option( 'display_author' );
 		$show_date = get_option( 'display_date' );
 		
