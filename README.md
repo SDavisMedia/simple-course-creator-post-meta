@@ -14,7 +14,7 @@ The code responsible for this is in `includes/display/class-scc-post-meta-hook.p
 
 Both `get_the_author_meta()` and `get_the_time()` will do their job just fine if placed directly into the output file for SCC. However, when hooked into that template from this plugin, the current post details are used instead. I need these functions to retrieve post information for the posts in the list... not the current post.
 
-The output file SCC is [here](https://github.com/sdavis2702/simple-course-creator/blob/master/includes/scc_templates/scc-output.php). This plugin hooks into line 90 of that file.
+The output file SCC is [here](https://github.com/sdavis2702/simple-course-creator/blob/master/includes/scc_templates/scc-output.php). This plugin hooks into line 98 of that file.
 
 If you know what simple adjustments are needed, please fork the repo and submit a pull request with the appropriate changes so you get your credit!
 
