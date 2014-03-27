@@ -1,28 +1,6 @@
 Simple Course Creator Post Meta
 =====================
 
-!!!!! WARNING !!!!! - start
----
-
-This plugin is 95% finished but the incomplete part, unfortunately, is the most important part. Interested in helping?
-
-Make sure you have [Simple Course Creator](https://github.com/sdavis2702/simple-course-creator) activated. Download, install, and activate this plugin. Create a new course and add two or more posts to it. 
-
-In one of the posts, view the post list. You will notice that the post meta author and date show the information for the current post... not the posts being retrieved.
-
-The code responsible for this is in `includes/display/class-scc-post-meta-hook.php` in the `after_item_post_meta` method. 
-
-Both `get_the_author_meta()` and `get_the_time()` will do their job just fine if placed directly into the output file for SCC. However, when hooked into that template from this plugin, the current post details are used instead. I need these functions to retrieve post information for the posts in the list... not the current post.
-
-The output file SCC is [here](https://github.com/sdavis2702/simple-course-creator/blob/master/includes/scc_templates/scc-output.php). This plugin hooks into line 98 of that file.
-
-If you know what simple adjustments are needed, please fork the repo and submit a pull request with the appropriate changes so you get your credit!
-
-Thanks a ton.
-
-!!!!! WARNING !!!!! - end
----
-
 This is an add-on plugin for use with the [Simple Course Creator](https://github.com/sdavis2702/simple-course-creator) plugin.
 
 Simple Course Creator is designed to easily link posts together in a series and output that series list in the content of each included post.
