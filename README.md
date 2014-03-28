@@ -23,11 +23,11 @@ Once activated, new options will be added to the SCC settings page under the dis
 
 New customizer options will also be available. If you have [Simple Course Creator Customizer](http://buildwpyourself.com/downloads/scc-customizer/) installed, your new settings will be merged. Otherwise, they will appear on their own.
 
-With Simple Course Creator Customizer:
+**With Simple Course Creator Customizer:**
 
 ![Simple Course Creator Post Meta Customizer Settings](http://buildwpyourself.com/wp-content/uploads/edd/2014/03/sccpm-sccc.png)
 
-Without Simple Course Creator Customizer:
+**Without Simple Course Creator Customizer:**
 
 ![Simple Course Creator Post Meta Customizer Settings](http://buildwpyourself.com/wp-content/uploads/edd/2014/03/sccpm-customizer.png)
 
