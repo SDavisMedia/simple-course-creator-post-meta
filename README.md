@@ -12,12 +12,24 @@ This post meta add-on outputs additional information about each post in the post
 
 Once activated, the post authors and dates published will appear beneath the post titles.
 
+![Simple Course Creator Post Meta](http://buildwpyourself.com/wp-content/uploads/edd/2014/03/sccpm-output.png)
+
 ### Settings and Customizer
 ---
 
 Once activated, new options will be added to the SCC settings page under the display tab. You can hide the author, date, or both.
 
+![Simple Course Creator Post Meta Settings](http://buildwpyourself.com/wp-content/uploads/edd/2014/03/sccpm-settings.png)
+
 New customizer options will also be available. If you have [Simple Course Creator Customizer](http://buildwpyourself.com/downloads/scc-customizer/) installed, your new settings will be merged. Otherwise, they will appear on their own.
+
+With Simple Course Creator Customizer:
+
+![Simple Course Creator Post Meta Customizer Settings](http://buildwpyourself.com/wp-content/uploads/edd/2014/03/sccpm-sccc.png)
+
+Without Simple Course Creator Customizer:
+
+![Simple Course Creator Post Meta Customizer Settings](http://buildwpyourself.com/wp-content/uploads/edd/2014/03/sccpm-customizer.png)
 
 ### Bugs and Contributions
 ---
