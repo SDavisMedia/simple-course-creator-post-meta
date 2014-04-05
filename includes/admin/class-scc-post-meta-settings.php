@@ -2,15 +2,22 @@
 /**
  * SCC Post Meta settings class
  *
+ * This class adds new settings to the Simple Course Creator
+ * settings page.
+ *
+ * It does not use add_settings_section() from WordPress Settings API
+ * because it uses the settings section already created by SCC. 
+ *
  * @since 1.0.0
  */
+if ( ! defined( 'ABSPATH' ) ) exit; // No accessing this file directly
+
+
 class SCC_Post_Meta_Settings {
 
 		
 	/**
 	 * constructor for SCC_Post_Meta_Settings class
-	 *
-	 * @since 1.0.0
 	 */
 	public function __construct() {
 		
@@ -21,8 +28,6 @@ class SCC_Post_Meta_Settings {
 	
 	/**
 	 * register SCC post meta settings
-	 *
-	 * @since 1.0.0
 	 */
 	public function register_settings() {
 		
@@ -40,7 +45,6 @@ class SCC_Post_Meta_Settings {
 	 * create post meta author option
 	 *
 	 * @callback_for 'display_author' field
-	 * @since 1.0.0
 	 */
 	public function post_meta_author() {
 		$pm_author = get_option( 'display_author' );
@@ -53,7 +57,6 @@ class SCC_Post_Meta_Settings {
 	 * create post meta date option
 	 *
 	 * @callback_for 'display_date' field
-	 * @since 1.0.0
 	 */
 	public function post_meta_date() {
 		$pm_date = get_option( 'display_date' );
@@ -66,7 +69,6 @@ class SCC_Post_Meta_Settings {
 	 * save options settings
 	 *
 	 * @used_by post_meta_author() & post_meta_date()
-	 * @since 1.0.0
 	 */
 	public function save_settings( $input ) {
 		

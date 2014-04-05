@@ -2,15 +2,22 @@
 /**
  * SCC_Post_Meta_Hook class
  *
+ * This class is responsible for hooking the post meta information
+ * into Simple Course Creators post listing on the front-end.
+ *
+ * It uses SCC's "scc_after_list_item" hook to place the information
+ * based on the plugin settings. 
+ *
  * @since 1.0.0
  */
+if ( ! defined( 'ABSPATH' ) ) exit; // No accessing this file directly
+
+
 class SCC_Post_Meta_Hook {
 
 		
 	/**
 	 * constructor for SCC_Post_Meta_Hook class
-	 *
-	 * @since 1.0.0
 	 */
 	public function __construct() {
 	
@@ -25,10 +32,8 @@ class SCC_Post_Meta_Hook {
 	/**
 	 * output content below post titles
 	 *
-	 * The information output in this method is applied to *each* article listed
-	 * in the course container.
-	 *
-	 * @since 1.0.0
+	 * The information output in this method is applied to *each*
+	 * article listed in the course container.
 	 */
 	public function after_item_post_meta( $post_id ) {
 		$show_author = get_option( 'display_author' );
@@ -61,8 +66,6 @@ class SCC_Post_Meta_Hook {
 
 	/**
 	 * load stylesheet for post meta output
-	 * 
-	 * @since 1.0.0
 	 */
 	public function frontend_styles() {
 		

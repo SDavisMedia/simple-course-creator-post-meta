@@ -2,23 +2,32 @@
 /**
  * SCC_Post_Meta_Customizer class
  *
+ * The plugin will first check to see if Simple Course Creator Customizer
+ * is activated (http://buildwpyourself.com/downloads/scc-customizer/) and
+ * if so, add settings to the "Simple Course Creator Design" section.
+ *
+ * If Simple Course Creator Customizer is not installed, a new section will
+ * be created with style options.
+ *
+ * None of this is done if Simple Course Creator is not activated.
+ * (http://buildwpyourself.com/downloads/simple-course-creator/)
+ *
  * @since 1.0.0
  */
+if ( ! defined( 'ABSPATH' ) ) exit; // No accessing this file directly
+
+
 class SCC_Post_Meta_Customizer {
 
 		
 	/**
 	 * check for Simple Course Creator Customizer plugin
-	 *
-	 * @since 1.0.0
 	 */
 	private $sccc_active;
 
 		
 	/**
 	 * constructor for SCC_Post_Meta_Customizer class
-	 *
-	 * @since 1.0.0
 	 */
 	public function __construct() {
 	
@@ -38,17 +47,7 @@ class SCC_Post_Meta_Customizer {
 	/** 
 	 * create customizer settings
 	 *
-	 * The plugin will first check to see if Simple Course Creator Customizer
-	 * is activated (http://buildwpyourself.com/downloads/scc-customizer/) and
-	 * if so, add settings to the "Simple Course Creator Design" section.
-	 *
-	 * If Simple Course Creator Customizer is not installed, a new section will
-	 * be created with style options.
-	 *
-	 * None of this is done if Simple Course Creator is not activated.
-	 * (http://buildwpyourself.com/downloads/simple-course-creator/)
-	 *
-	 * @since 1.0.0
+	 * Only add the options to the customizer if SCC is activated.
 	 */
 	public function settings( $wp_customize ) {
 		if ( class_exists( 'Simple_Course_Creator' ) ) {
@@ -62,7 +61,7 @@ class SCC_Post_Meta_Customizer {
 			if ( ! $this->sccc_active ) {
 			
 				$wp_customize->add_section( 'scc_post_meta_customizer', array(
-			    	'title'       	=> __( 'SCC Post Meta Design', 'scc_post_meta' ),
+			    	'title'       	=> 'SCC Post Meta ' . __( 'Design', 'scc_post_meta' ),
 					'description' 	=> __( 'Use this section to style the post meta output. For complete SCC output style options, you should install the ', 'scc_post_meta' ) . '<a href="http://buildwpyourself.com/downloads/scc-customizer/" target="_blank">' . 'SCC Customizer' . __( ' plugin', 'scc_post_meta' ) . '</a>.',
 					'priority'   	=> 100,
 				) );
@@ -102,9 +101,8 @@ class SCC_Post_Meta_Customizer {
 	 * add customizer styles to <head>
 	 *
 	 * If Simple Course Creator Customizer is installed, hook into
-	 * its <style> section of the head. If not, create a new one.
-	 *
-	 * @since 1.0.0
+	 * its <style> section of the head using the "scc_add_to_styles"
+	 * hook. If not, create a new one <style> section through wp_head().
 	 */
 	public function head_styles() {
 		if ( class_exists( 'Simple_Course_Creator' ) ) {

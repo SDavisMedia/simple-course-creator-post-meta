@@ -29,10 +29,7 @@
  * @author Sean Davis
  * @license GNU GENERAL PUBLIC LICENSE Version 2 - /license.txt
  */
-
-
-// No accessing this file directly
-if ( ! defined( 'ABSPATH' ) ) exit;
+if ( ! defined( 'ABSPATH' ) ) exit; // No accessing this file directly
 
 
 /**
@@ -46,12 +43,13 @@ class Simple_Course_Creator_Post_Meta {
 	/**
 	 * constructor for Simple_Course_Creator_Post_Meta class
 	 *
-	 * @since 1.0.0
+	 * Set up the basic plugin environment and with definitions,
+	 * plugin information, and required plugin files.
 	 */
 	public function __construct() {
 		
 		// define plugin name
-		define( 'SCCPM_NAME', __( 'Simple Course Creator Post Meta', 'scc_post_meta' ) );
+		define( 'SCCPM_NAME', 'Simple Course Creator Post Meta' );
 		
 		// define plugin version
 		define( 'SCCPM_VERSION', '1.0.0' );
@@ -72,8 +70,6 @@ class Simple_Course_Creator_Post_Meta {
 
 	/**
 	 * load SCC Post Meta textdomain
-	 *
-	 * @since 1.0.0
 	 */
 	public function load_textdomain() {
 		load_plugin_textdomain( 'scc_post_meta', false, SCCPM_DIR . "languages" );
@@ -82,8 +78,6 @@ class Simple_Course_Creator_Post_Meta {
 	
 	/**
 	 * require additional plugin files
-	 *
-	 * @since 1.0.0
 	 */
 	private function includes() {
 		require_once( SCCPM_DIR . 'includes/display/class-scc-post-meta-hook.php' );		// hooks output class
