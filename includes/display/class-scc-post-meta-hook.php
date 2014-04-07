@@ -3,7 +3,7 @@
  * SCC_Post_Meta_Hook class
  *
  * This class is responsible for hooking the post meta information
- * into Simple Course Creators post listing on the front-end.
+ * into Simple Course Creator's post listing on the front-end.
  *
  * It uses SCC's "scc_after_list_item" hook to place the information
  * based on the plugin settings. 
