@@ -21,7 +21,7 @@ class SCC_Post_Meta_Hook {
 	 */
 	public function __construct() {
 	
-		// load customizer functionality
+		// load post meta output information
 		add_action( 'scc_after_list_item', array( $this, 'after_item_post_meta' ) );
 		
 		// load post meta css
