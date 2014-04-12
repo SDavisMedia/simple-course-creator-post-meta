@@ -31,6 +31,30 @@ New customizer options will also be available. If you have [Simple Course Creato
 
 ![Simple Course Creator Post Meta Customizer Settings](http://buildwpyourself.com/wp-content/uploads/edd/2014/03/sccpm-customizer.png)
 
+### Theme Overrides
+---
+
+You can edit the post meta output using the following filters in your **theme** functions file.
+
+For the "written by" text:
+
+```php
+function your_filter_name( $content ) {
+	$content = str_replace( 'written by', 'post author', $content );
+	return $content;
+}
+add_filter( 'written_by', 'your_filter_name' );
+
+For the "on" text:
+
+```php
+function your_other_filter_name( $content ) {
+	$content = str_replace( 'on', 'date', $content );
+	return $content;
+}
+add_filter( 'written_on', 'your_other_filter_name' );
+```
+
 ### Bugs and Contributions
 ---
 
