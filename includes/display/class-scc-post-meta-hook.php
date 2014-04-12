@@ -38,6 +38,8 @@ class SCC_Post_Meta_Hook {
 	public function after_item_post_meta( $post_id ) {
 		$show_author = get_option( 'display_author' );
 		$show_date = get_option( 'display_date' );
+		$written_by = apply_filters( 'written_by', __( 'written by', 'scc_post_meta' ) );
+		$written_on = apply_filters( 'written_on', __( 'on', 'scc_post_meta' ) );
 		
 		// grab the author of the post
 		$author_name = get_post_field( 'post_author', $post_id );
@@ -52,11 +54,11 @@ class SCC_Post_Meta_Hook {
 		}
 		echo $pm_open;
 		if ( $show_author != 1 ) {
-			echo __( 'written by ', 'scc_post_meta' ) . get_the_author_meta( 'display_name', $author_name );
+			echo $written_by . ' ' . get_the_author_meta( 'display_name', $author_name );
 		}
 		if ( $show_date != 1 ) {
 			if ( $show_author != 1 ) {
-				echo __( ' on ', 'scc_post_meta' );
+				echo ' ' . $written_on . ' ';
 			}
 			echo get_the_time( 'F j, Y', $post_id );
 		}
