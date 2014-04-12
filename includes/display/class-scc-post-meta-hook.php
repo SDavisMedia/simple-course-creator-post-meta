@@ -54,11 +54,11 @@ class SCC_Post_Meta_Hook {
 		}
 		echo $pm_open;
 		if ( $show_author != 1 ) {
-			echo $written_by . ' ' . get_the_author_meta( 'display_name', $author_name );
+			echo '<span class="sccpm-author">' . $written_by . '</span> ' . get_the_author_meta( 'display_name', $author_name );
 		}
 		if ( $show_date != 1 ) {
 			if ( $show_author != 1 ) {
-				echo ' ' . $written_on . ' ';
+				echo ' <span class="sccpm-date">' . $written_on . '</span> ';
 			}
 			echo get_the_time( 'F j, Y', $post_id );
 		}
