@@ -45,5 +45,8 @@ The post meta customizer options will be merged with SCC Customizer.
 
 == Changelog ==
 
+= 1.0.1 =
+* add filters for post author and published date output
+
 = 1.0.0 =
 * first stable version
