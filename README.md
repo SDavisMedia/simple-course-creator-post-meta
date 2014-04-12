@@ -44,6 +44,7 @@ function your_filter_name( $content ) {
 	return $content;
 }
 add_filter( 'written_by', 'your_filter_name' );
+```
 
 For the "on" text:
 
