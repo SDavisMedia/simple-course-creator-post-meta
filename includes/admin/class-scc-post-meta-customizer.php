@@ -72,7 +72,7 @@ class SCC_Post_Meta_Customizer {
 			$colors[] = array(
 				'slug'		=>'scc_pm_text_color', 
 				'label'		=> __( 'Post Meta Text Color', 'scc_post_meta' ),
-				'priority'	=> 81
+				'priority'	=> 101
 			);
 			
 			// build settings from $colors array
