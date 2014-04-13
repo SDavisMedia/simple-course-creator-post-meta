@@ -1,4 +1,4 @@
-=== Plugin Name ===
+=== Simple Course Creator Post Meta ===
 Contributors: sdavis2702
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=52HQDSEUA542S
 Tags: customizer, series, course, lesson, taxonomy
