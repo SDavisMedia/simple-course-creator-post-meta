@@ -72,7 +72,7 @@ class Simple_Course_Creator_Post_Meta {
 	 * load SCC Post Meta textdomain
 	 */
 	public function load_textdomain() {
-		load_plugin_textdomain( 'scc_post_meta', false, SCCPM_DIR . "languages" );
+		load_plugin_textdomain( 'scc_post_meta', false, SCCPM_DIR . 'languages/' );
 	}
 	
 	
