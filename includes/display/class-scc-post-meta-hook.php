@@ -6,7 +6,7 @@
  * into Simple Course Creator's post listing on the front-end.
  *
  * It uses SCC's "scc_after_list_item" hook to place the information
- * based on the plugin settings. 
+ * based on the plugin settings.
  *
  * @since 1.0.0
  */
@@ -36,7 +36,16 @@ class SCC_Post_Meta_Hook {
 	 * article listed in the course container.
 	 */
 	public function after_item_post_meta( $post_id ) {
-		$pm_options = get_option( 'course_display_settings' );
+
+		// set option defaults
+		$defaults = array(
+			'display_author'  => '0',
+			'display_date'    => '0',
+		);
+		$options = get_option( 'course_display_settings', $defaults );
+		$options = wp_parse_args( $options, $defaults );
+
+		// set filters
 		$written_by = apply_filters( 'written_by', __( 'written by', 'scc_post_meta' ) );
 		$written_on = apply_filters( 'written_on', __( 'on', 'scc_post_meta' ) );
 
@@ -44,7 +53,7 @@ class SCC_Post_Meta_Hook {
 		$author_name = get_post_field( 'post_author', $post_id );
 
 		// show post meta data based on settings
-		if ( ( ! isset( $pm_options['display_author'] ) || $pm_options['display_author'] == '0' ) || ( ! isset( $pm_options['display_date'] ) || $pm_options['display_date'] == '0' ) ) {
+		if ( ( ! isset( $options['display_author'] ) || '0' == $options['display_author'] ) || ( ! isset( $options['display_date'] ) || '0' == $options['display_date'] ) ) {
 			$pm_open = '<p class="scc-post-meta">';
 			$pm_close = '</p>';
 		} else {
@@ -52,11 +61,11 @@ class SCC_Post_Meta_Hook {
 			$pm_close = '';
 		}
 		echo $pm_open;
-		if ( ! isset( $pm_options['display_author'] ) || $pm_options['display_author'] == '0' ) {
+		if ( ! isset( $options['display_author'] ) || '0' == $options['display_author'] ) {
 			echo '<span class="sccpm-author">' . $written_by . '</span> ' . get_the_author_meta( 'display_name', $author_name );
 		}
-		if ( ! isset( $pm_options['display_date'] ) || $pm_options['display_date'] == '0' ) {
-			if ( ! isset( $pm_options['display_author'] ) || $pm_options['display_author'] == '0' ) {
+		if ( ! isset( $options['display_date'] ) || '0' == $options['display_date'] ) {
+			if ( ! isset( $options['display_author'] ) || '0' == $options['display_author'] ) {
 				echo ' <span class="sccpm-date">' . $written_on . '</span> ';
 			}
 			echo get_the_time( 'F j, Y', $post_id );

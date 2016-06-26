@@ -38,13 +38,13 @@ class SCC_Post_Meta_Customizer {
 		add_action( 'customize_register', array( $this, 'settings' ) );
 
 		// If Simple Course Creator Customizer is installed, hook into
-		// its <style> section of the head. If not, go for wp_head(). 
+		// its <style> section of the head. If not, go for wp_head().
 		$scc_styles_loc = $this->sccc_active ? 'scc_add_to_styles' : 'wp_head';
 		add_action( $scc_styles_loc, array( $this, 'head_styles' ) );
 	}
 
 
-	/** 
+	/**
 	 * create customizer settings
 	 *
 	 * Only add the options to the customizer if SCC is activated.
@@ -61,18 +61,18 @@ class SCC_Post_Meta_Customizer {
 			if ( ! $this->sccc_active ) {
 
 				$wp_customize->add_section( 'scc_post_meta_customizer', array(
-			    	'title'       	=> 'SCC Post Meta ' . __( 'Design', 'scc_post_meta' ),
-					'description' 	=> sprintf( __( 'Use this section to style the post meta output. For complete SCC output style options, you should install the %s plugin.', 'scc_post_meta' ), '<a href="http://buildwpyourself.com/downloads/scc-customizer/" target="_blank">SCC Customizer</a>' ),
-					'priority'   	=> 100,
+					'title'        => 'SCC Post Meta ' . __( 'Design', 'scc_post_meta' ),
+					'description'  => sprintf( __( 'Use this section to style the post meta output. For complete SCC output style options, you should install the %s plugin.', 'scc_post_meta' ), '<a href="http://buildwpyourself.com/downloads/scc-customizer/" target="_blank">SCC Customizer</a>' ),
+					'priority'     => 100,
 				) );
 
 			}
 
 			// post meta text color
 			$colors[] = array(
-				'slug'		=>'scc_pm_text_color', 
-				'label'		=> __( 'Post Meta Text Color', 'scc_post_meta' ),
-				'priority'	=> 101
+				'slug'      =>'scc_pm_text_color',
+				'label'     => __( 'Post Meta Text Color', 'scc_post_meta' ),
+				'priority'  => 101
 			);
 
 			// build settings from $colors array
@@ -80,17 +80,16 @@ class SCC_Post_Meta_Customizer {
 
 				// customizer settings
 				$wp_customize->add_setting( $color['slug'], array(
-					'default'		=> $color['default'],
-					'type'			=> 'option', 
-					'capability'	=>  'edit_theme_options'
+					'type'        => 'option',
+					'capability'  =>  'edit_theme_options'
 				) );
 
 				// customizer controls
 				$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, $color['slug'], array(
-					'label'		=> $color['label'], 
-					'section'	=> $sccpm_customizer,
-					'settings'	=> $color['slug'],
-					'priority'	=> $color['priority']
+					'label'     => $color['label'],
+					'section'   => $sccpm_customizer,
+					'settings'  => $color['slug'],
+					'priority'  => $color['priority']
 				) ) );
 			}
 		}
@@ -103,12 +102,12 @@ class SCC_Post_Meta_Customizer {
 	public function scc_post_meta_sanitize_hex_color( $color ) {
 		if ( '' === $color ) :
 			return '';
-	    endif;
+		endif;
 
 		// 3 or 6 hex digits, or the empty string.
 		if ( preg_match('|^#([A-Fa-f0-9]{3}){1,2}$|', $color ) ) :
 			return $color;
-	    endif;
+		endif;
 
 		return null;
 	}
@@ -130,10 +129,10 @@ class SCC_Post_Meta_Customizer {
 
 					// post meta text color
 					if ( $scc_pm_text_color ) {
-						echo 'color:' . $this->scc_post_meta_sanitize_hex_color( $scc_pm_text_color ) . ';';		
+						echo 'color:' . $this->scc_post_meta_sanitize_hex_color( $scc_pm_text_color ) . ';';
 					}
 
-				echo '}';			
+				echo '}';
 			echo ! $this->sccc_active ? '</style>' : '';
 		}
 	}
