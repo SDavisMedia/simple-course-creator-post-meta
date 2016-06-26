@@ -3,8 +3,8 @@ Contributors: sdavis2702
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=52HQDSEUA542S
 Tags: customizer, series, course, lesson, taxonomy, sdavis2702
 Requires at least: 3.8
-Tested up to: 4.1
-Stable tag: 1.0.6
+Tested up to: 4.6
+Stable tag: 1.0.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,11 +37,11 @@ No. Get Simple Course Creator now. http://buildwpyourself.com/downloads/simple-c
 
 = Does this plugin add customizer options for the post meta output? =
 
-Yes. 
+Yes.
 
 = What if I already have Simple Course Creator Customizer installed? =
 
-The post meta customizer options will be merged with SCC Customizer. 
+The post meta customizer options will be merged with SCC Customizer.
 
 == Screenshots ==
 
@@ -50,6 +50,10 @@ The post meta customizer options will be merged with SCC Customizer.
 3. post meta output
 
 == Changelog ==
+
+= 1.0.7 =
+* improved: added default values for settings
+* fixed: PHP notices in Customizer
 
 = 1.0.6 =
 * improved: removed white space
