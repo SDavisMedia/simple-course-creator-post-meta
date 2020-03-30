@@ -3,7 +3,8 @@ Simple Course Creator Post Meta
 
 View it on WordPress: (http://wordpress.org/plugins/simple-course-creator-post-meta/)
 
-This is an add-on plugin for use with the [Simple Course Creator](https://github.com/sdavis2702/simple-course-creator) plugin.
+This is an add-on plugin for use with the [Simple Course Creator](https://github.com/sdavismedia/simple-course-creator
+) plugin.
 
 Simple Course Creator is designed to easily link posts together in a series and output that series list in the content of each included post.
 
@@ -14,24 +15,13 @@ This post meta add-on outputs additional information about each post in the post
 
 Once activated, the post authors and dates published will appear beneath the post titles.
 
-![Simple Course Creator Post Meta](http://buildwpyourself.com/wp-content/uploads/edd/2014/03/sccpm-output.png)
-
 ### Settings and Customizer
 ---
 
 Once activated, new options will be added to the SCC settings page under the display tab. You can hide the author, date, or both.
 
-![Simple Course Creator Post Meta Settings](http://buildwpyourself.com/wp-content/uploads/edd/2014/03/sccpm-settings.png)
-
-New customizer options will also be available. If you have [Simple Course Creator Customizer](http://buildwpyourself.com/downloads/scc-customizer/) installed, your new settings will be merged. Otherwise, they will appear on their own.
-
-**With Simple Course Creator Customizer:**
-
-![Simple Course Creator Post Meta Customizer Settings](http://buildwpyourself.com/wp-content/uploads/edd/2014/03/sccpm-sccc.png)
-
-**Without Simple Course Creator Customizer:**
-
-![Simple Course Creator Post Meta Customizer Settings](http://buildwpyourself.com/wp-content/uploads/edd/2014/03/sccpm-customizer.png)
+New customizer options will also be available. If you have [Simple Course Creator Customizer](https://github.com/sdavismedia/simple-course-creator-customizer/) installed, your new settings will be merged. Otherwise, they will
+ appear on their own.
 
 ### Theme Overrides
 ---
@@ -71,6 +61,7 @@ This plugin, like WordPress, is licensed under the GPL. Do what you want with it
 ### Developer
 ---
 
-I'm Sean. I created the [Volatyl Framework](http://volatylthemes.com) for WordPress. I like to do most of my WordPress stuff on [Build WordPress Yourself](http://buildwpyourself.com/). I also write stuff on my [personal site](http://seandavis.co) and [SDavis Media](http://sdavismedia.com). Follow me on the [Twitter](http://sdvs.me/twitter) machine.
+I'm Sean. I've created a few little pieces of software. I'm not that easy to find online. That's by design.
 
-Meanwhile, tell me... is this plugin useful to you? If so, consider buying me a box of "Tazo: Awake - English Breakfast Black Tea." I need ALL the energiez. Thanks. [Donate Black Tea](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=52HQDSEUA542S)
+Is this plugin useful to you? If so, please consider buying me a bag of coffee beans. Thank you much. [Donate via
+ PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=52HQDSEUA542S)
